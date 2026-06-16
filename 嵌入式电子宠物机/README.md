@@ -76,9 +76,10 @@ Images/
 - [x] 按键驱动
 - [x] OLED 驱动
 - [x] 蜂鸣器驱动
-- [ ] 定时器（TIM）
-- [ ] 宠物数据结构
-- [ ] OLED 宠物状态界面
+- [x] TIM2 定时器（1ms SystemTick）
+- [x] Pet 模块（数据结构与初始化）
+- [ ] Pet 自动状态更新
+- [ ] OLED 宠物界面
 - [ ] 宠物图片显示
 - [ ] 喂食功能
 - [ ] 玩耍功能
@@ -87,24 +88,13 @@ Images/
 - [ ] 互动小游戏
 - [ ] 项目优化与测试
 - [ ] 项目完成
+
 ---
 
 # 📂 当前项目结构
 
 ```text
 VirtualPet_STM32
-│
-├── README.md
-├── Images/
-│   ├── wiring.jpg
-│   ├── led_test.jpg
-│   ├── key_test.jpg
-│   ├── oled_test.jpg
-│   └── buzzer_test.jpg
-│
-├── Videos/
-│   ├── key_led_test.mp4
-│   └── buzzer_test.mp4
 │
 ├── Hardware/
 │   ├── LED.c
@@ -119,14 +109,23 @@ VirtualPet_STM32
 │   ├── OLED_Wire.c
 │   ├── OLED_Wire.h
 │   ├── Buzzer.c
-│   └── Buzzer.h
+│   ├── Buzzer.h
+│   ├── Timer.c
+│   └── Timer.h
 │
+├── Pet/
+│   ├── Pet.c
+│   └── Pet.h
+│
+├── Images/
+├── Videos/
 ├── Library/
 ├── Start/
 ├── System/
 ├── User/
-└── Project.uvprojx
+└── README.md
 ```
+
 
 ---
 
@@ -142,30 +141,30 @@ VirtualPet_STM32
 
 ## 2026-06-16
 
+### 完成内容
+
 - 创建 GitHub 仓库
 - 编写项目 README
-- 完成面包板硬件接线
-- 建立 STM32 标准库工程（Keil）
-- 完成 LED 驱动并测试通过
-- 完成按键驱动并测试通过
-- 完成 OLED 驱动，成功显示字符串
-- 完成蜂鸣器驱动，实现提示音功能
+- 完成 STM32 最小系统硬件接线
+- 建立 STM32F103C8T6 标准库工程（Keil5）
+- 完成 LED 驱动模块
+- 完成按键驱动模块
+- 完成 OLED 驱动模块
+- 完成有源蜂鸣器驱动模块
+- 完成 TIM2 定时器驱动，实现 1ms SystemTick
+- 新建 Pet 模块（Pet.c / Pet.h）
+- 完成 Pet 数据结构设计
+- 完成 Pet_Init() 初始化函数
+- OLED 成功显示宠物基础属性（Food、Happy）
 
 ---
-# 🚀 下一阶段（Roadmap）
+# 🚀 下一阶段
 
-接下来计划完成以下内容：
+- [ ] 完善 Pet_Update()
+- [ ] 使用 TIM2 实现宠物状态自动更新
+- [ ] OLED 实时刷新 Food、Happy、Health
+- [ ] 显示第一版宠物图像（32×32）
+- [ ] 根据状态切换宠物表情
 
-- [ ] 定时器（TIM）驱动
-- [ ] 宠物数据结构设计
-- [ ] OLED 宠物状态界面
-- [ ] 宠物图片显示
-- [ ] 喂食功能
-- [ ] 玩耍功能
-- [ ] 医疗功能
-- [ ] 随机事件系统
-- [ ] 互动小游戏
-- [ ] 项目优化与测试
-- [ ] 项目完成
 ---
 > 本项目用于记录 STM32 学习过程，并持续更新开发内容。
