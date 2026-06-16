@@ -68,32 +68,35 @@ Images/
 
 ## 📈 当前开发进度
 
-* [x] 创建 GitHub 仓库
-* [x] 编写 README
-* [x] 完成硬件接线
-* [ ] 创建 Keil 工程
-* [ ] LED 驱动
-* [ ] 按键驱动
-* [ ] OLED 驱动
-* [ ] 蜂鸣器驱动
-* [ ] 定时器
-* [ ] 电子宠物逻辑
-* [ ] 项目完成
-
+- [x] 创建 GitHub 仓库
+- [x] 编写 README
+- [x] 完成硬件接线
+- [x] 建立标准库工程
+- [x] LED 驱动
+- [ ] 按键驱动
+- [ ] OLED 驱动
+- [ ] 蜂鸣器驱动
+- [ ] 定时器
+- [ ] 电子宠物逻辑
+- [ ] 项目完成
+      
 ---
 
 ## 📂 项目目录
 
-```
-STM32-Electronic-Pet
+```text
+VirtualPet_STM32
 │
 ├── README.md
 ├── Images/
-├── Docs/
+├── Hardware/
+│   ├── LED.c
+│   └── LED.h
 ├── Library/
 ├── Start/
-├── User/
-└── Project/
+├── System/
+├── Project.uvprojx
+└── User/
 ```
 
 ---
@@ -117,17 +120,14 @@ STM32-Electronic-Pet
 
 ---
 
-## 🚀 后续计划
+## 🚀 下一阶段
 
-下一阶段将完成：
+下一步计划完成：
 
-1. 创建 Keil 工程
-2. LED 驱动
-3. 按键驱动
-4. OLED 驱动
-5. 定时器
-6. 电子宠物基础功能
+- 按键驱动
+- OLED 显示
+- 蜂鸣器驱动
+- 定时器功能
 
 ---
-
 > 本项目用于记录 STM32 学习过程，并持续更新开发内容。
